@@ -4,4 +4,8 @@ class BooksController < ApplicationController
         @book = Book.create(name: params[:name])
         render 'books/create.jbuilder'
     end
+    def get
+        @book = Book.find(params[:id])
+        render 'books/create.jbuilder'
+    end
 end
